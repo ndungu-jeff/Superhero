@@ -1,6 +1,7 @@
 class Power < ApplicationRecord
   has_many :hero_powers
-  has_many :heroes, through: :hero_powers
-
+  has_many :heros, through: :hero_powers
+  
+    # validating.
   validates :description, presence: true, length: { minimum: 20 }
 end
